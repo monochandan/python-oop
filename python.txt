@@ -1,0 +1,15 @@
+classes: https://docs.python.org/3/tutorial/classes.html#tut-private
+
+emulating numerical objects (can be use as magic method in class): https://docs.python.org/3/reference/datamodel.html#emulating-numeric-types
+
+
+6.2.1.1. Private name mangling : https://docs.python.org/3/reference/expressions.html#index-5
+
+vs code icons meaning: https://code.visualstudio.com/docs/editor/intellisense#_types-of-completions
+
+strg + alt + I for copilot
+strg + L copy line
+strg +alt + upper /down arrow copy multiple line
+ctrl + alt built in function snippet
+ctrl + alt + mouse_left side by side display
+
