@@ -121,30 +121,30 @@ class Manager(Employee):
 
  # print(Employee.num_of_employee) # 0
 
-# dev_1 = Developer('Corey', 'Schefer', 5000, 'Python')
-# dev_2 = Developer('c', 's', 23000, 'Java')
+dev_1 = Developer('Corey', 'Schefer', 5000, 'Python')
+dev_2 = Developer('c', 's', 23000, 'Java')
 
 
-# mgr_1 = Manager('sue', 'smith', 90000, [dev_1])
+mgr_1 = Manager('sue', 'smith', 90000, [dev_1])
 
 emp_1 = Employee('Corey', 'Schefer', 5000)
 emp_2 = Employee('c', 's', 23000)
 
 
-# emp_1.first_name = 'Jim'
-# print(emp_1.first_name)
+emp_1.first_name = 'Jim'
+print(emp_1.first_name)
 '''
 emp_1's email has not changed, because it has initialized once, when the emp_1 was created. 
 So now even we  changing the first name emp_1, it will not change the email varivale implicitly
 
 '''
-# print(emp_1.email)
+print(emp_1.email)
 '''
 @property - dont have to add email(). It will looks like attribute, 
 but it is a function inside a class [thanks to @property decorator!!]
 '''
-# print(emp_1.email)
-# print(emp_1.full_name)
+print(emp_1.email)
+print(emp_1.full_name)
 
 
 '''
@@ -152,11 +152,11 @@ Can not set the attributes on @property method:
 AttributeError: property 'full_name' of 'Employee' object has no setter
 
 '''
-# emp_1.full_name = 'Mono Chandan'
-# print(emp_1.first_name)
-# # print(emp_1.last_name)
-# print(emp_1.full_name)
-# print(emp_1.email)
+emp_1.full_name = 'Mono Chandan'
+print(emp_1.first_name)
+# print(emp_1.last_name)
+print(emp_1.full_name)
+print(emp_1.email)
 
 '''Delet the name using @property @full_name.deleter '''
 del emp_1.full_name
@@ -165,102 +165,99 @@ print(emp_1.email)
 print(emp_1.full_name)
 print(emp_1.last_name)
 
-# print(emp_1)
-# print(repr(emp_1))
-# print(str(emp_1))
+print(emp_1)
+print(repr(emp_1))
+print(str(emp_1))
 
 '''Dunder Method'''
-# print(emp_1.__repr__())
-# print(emp_1.__str__())
-# print(emp_1.__init__('first_name', 'last_name', 100))
+print(emp_1.__repr__())
+print(emp_1.__str__())
+print(emp_1.__init__('first_name', 'last_name', 100))
 
-# print(emp_1.full_name())
+print(emp_1.full_name())
 
 '''Dunder Add'''
-# print(int.__add__(1, 2)) # same as print(1+2)
+print(int.__add__(1, 2)) # same as print(1+2)
 
 '''Dunder method to add 2 employees salary, function declared in the Employee class
 original page: https://docs.python.org/3/reference/datamodel.html#emulating-container-types
 '''
-# print(emp_1 + emp_2)
+print(emp_1 + emp_2)
 
 '''Dunder Method for getting the length of the emp name'''
 
-# print(len(emp_1.full_name()))
+print(len(emp_1.full_name()))
 
-# print(isinstance(mgr_1, Manager))# is the object is a instance of a class
-# print(isinstance(mgr_1, Employee))# is the object is a instance of a class
-# print(isinstance(mgr_1, Developer))# is the object is a instance of a class
+print(isinstance(mgr_1, Manager))# is the object is a instance of a class
+print(isinstance(mgr_1, Employee))# is the object is a instance of a class
+print(isinstance(mgr_1, Developer))# is the object is a instance of a class
 
-# print(issubclass(Manager, Employee))
-# print(issubclass(Developer, Manager))
-# print(mgr_1.email)
-# mgr_1.add_employee(dev_2)
-# mgr_1.remove_employee(dev_1)
-# mgr_1.print_emps()
+print(issubclass(Manager, Employee))
+print(issubclass(Developer, Manager))
+print(mgr_1.email)
+mgr_1.add_employee(dev_2)
+mgr_1.remove_employee(dev_1)
+mgr_1.print_emps()
 
-
-# print(dev_1.email)
-# print(dev_1.prog_lang)
-# dev_1.apply_raise()
-# print(dev_1.pay)
-# print(dev_1.email)
-# print(dev_2.email)
-
-# print(help(Developer))
-
-
-
-# import datetime
-# my_date = datetime.date(2016, 7, 10)
-# print(Employee.is_workday(my_date))
-
-# emp_str_1 = 'John-Doe-70000'
-# emp_str_2 = 'Steve-Smith-30000'
-# emp_str_3 = 'Jane-Doe-90000'
-
-# new_employee_1 = Employee.from_string(emp_str_1)
-
-# new_employee = Employee(first, last, pay)
-
-# print(new_employee_1.email)
-# print(new_employee_1.pay)
-
-# Employee.set_raise_amt(1.05) #  equal to Employee.raise_amount = 1.04
-
-# emp_1.set_raise_amt(1.05) #  change in class level, though we have called from instance level
+# 
+print(dev_1.email)
+print(dev_1.prog_lang)
+dev_1.apply_raise()
+print(dev_1.pay)
+print(dev_1.email)
+print(dev_2.email)
+# 
+print(help(Developer))
+# 
+# 
+# 
+import datetime
+my_date = datetime.date(2016, 7, 10)
+print(Employee.is_workday(my_date))
+# 
+emp_str_1 = 'John-Doe-70000'
+emp_str_2 = 'Steve-Smith-30000'
+emp_str_3 = 'Jane-Doe-90000'
+# 
+new_employee_1 = Employee.from_string(emp_str_1)
+# 
+new_employee = Employee(first, last, pay)
+# 
+print(new_employee_1.email)
+print(new_employee_1.pay)
+# 
+Employee.set_raise_amt(1.05) #  equal to Employee.raise_amount = 1.04
+# 
+emp_1.set_raise_amt(1.05) #  change in class level, though we have called from instance level
 # my explanation : 
-                # it could be because, emp_1 is instance of a Employee Blueprint
-                # so python giving access to it to the Employee class to change it the class level variable by using
-                # the class level  method
+#                 it could be because, emp_1 is instance of a Employee Blueprint
+#                 # so python giving access to it to the Employee class to change it the class level variable by using
+#                 # the class level  method
 
 
-# print(Employee.raise_amount)
-# print(emp_1.raise_amount)
-# print(emp_2.raise_amount)
-
-
-
-# print(emp_1.num_of_employee) # 2
-
-# print(emp_1.pay)
-# emp_1.apply_raise()
-# print(emp_1.pay)
-
-# print(Employee.__dict__)
-# print(emp_1.__dict__)
-
-# Employee.raise_amount = 1.05 # change all instance value
-# emp_1.raise_amount = 1.05 # only chnage the emp_1 value
-
-
-# print(Employee.raise_amount)
-# print(emp_1.raise_amount)
-# print(emp_2.raise_amount)
-
-
-
-
+print(Employee.raise_amount)
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
+# 
+# 
+# 
+print(emp_1.num_of_employee) # 2
+# 
+print(emp_1.pay)
+emp_1.apply_raise()
+print(emp_1.pay)
+# 
+print(Employee.__dict__)
+print(emp_1.__dict__)
+# 
+Employee.raise_amount = 1.05 # change all instance value
+emp_1.raise_amount = 1.05 # only chnage the emp_1 value
+# 
+# 
+print(Employee.raise_amount)
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
+# 
 
 
 
@@ -277,21 +274,24 @@ original page: https://docs.python.org/3/reference/datamodel.html#emulating-cont
 
 
 
-# print(emp_1.email)
-# print(emp_2.email)
-
-# print(emp_1.full_name())
-# print(Employee.full_name(emp_1))
-# emp_1.first = 'Corey'
-# emp_1.last = 'Schafer'
-# emp_1.email = 'abc'
-# emp_1.pay = 1000
 
 
-# emp_2.first = 'C'
-# emp_2.last = 'S'
-# emp_2.email = 'a'
-# emp_2.pay = 100
 
-# print(emp_1.email)
-
+print(emp_1.email)
+print(emp_2.email)
+# 
+print(emp_1.full_name())
+print(Employee.full_name(emp_1))
+emp_1.first = 'Corey'
+emp_1.last = 'Schafer'
+emp_1.email = 'abc'
+emp_1.pay = 1000
+# 
+# 
+emp_2.first = 'C'
+emp_2.last = 'S'
+emp_2.email = 'a'
+emp_2.pay = 100
+# 
+print(emp_1.email)
+# 
